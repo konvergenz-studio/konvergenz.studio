@@ -17,6 +17,9 @@ body {
     align-items: center;
     align-content: center;
 }
+.page .page-side.page-side-scrollable {
+    overflow-y: scroll;
+}
 .page .page-side.page-side-imprint {
     flex-grow: 1;
     background: url('./img/imprint.jpg');
