@@ -30,7 +30,7 @@ class Home extends React.Component {
         this.props.setActiveLanguage(defaultLanguage);
         setTimeout(() => {
             this.props.history.push("/welcome");
-       }, 1000)
+       }, 30000)
     }
 
     initLanguage(){

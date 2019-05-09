@@ -10,14 +10,19 @@ import Contact from './components/Contact';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import Impressum from './components/Impressum';
 
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-139948577-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
+
+
 const App = () => {
   return (
     <div>
       <LocalizeProvider>
         <Switch>
-          <Route path='/intro' component={Intro}/>
+          <Route exact path='/' component={Intro}/>
           <Route path='/home' component={Home}/>
-          <Route exact path='/' component={Welcome}/>
+          <Route path='/welcome' component={Welcome}/>
           <Route path='/contact' component={Contact}/>
           <Route path='/privacy_policy' component={PrivacyPolicy}/>
           <Route path='/impressum' component={Impressum}/>
@@ -27,8 +32,9 @@ const App = () => {
   );
 }
 
+
 ReactDOM.render((
   <BrowserRouter>
-    <App />
+      <App />
   </BrowserRouter>
 ), document.getElementById("app"));

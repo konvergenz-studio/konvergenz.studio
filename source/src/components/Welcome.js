@@ -11,9 +11,8 @@ import homeButton from '../../public/images/HomeButton.svg';
 import securityLock from '../../public/images/SecurityLock.svg';
 import lineBar from '../../public/images/lineBar.svg';
 
-
 import Lottie from 'react-lottie';
-import * as logoAnimation from '../../public/animations/smile-button.json'
+import * as logoAnimation from '../../public/animations/smile-button.json';
 
 import $ from 'jquery';
 window.jQuery = $;
@@ -29,8 +28,8 @@ class Welcome extends React.Component {
     }
 
     componentDidMount() {
-      $("#cookiesAlert").modal('show');
-      this.initLanguage();
+        //$("#cookiesAlert").modal('show');
+        this.initLanguage();
     }
 
     initLanguage(){
@@ -93,11 +92,11 @@ class Welcome extends React.Component {
 
           </div>
 
-          <div id="cookiesAlert" className="modal fade" role="dialog" data-focus="false" data-backdrop="true" data-keyboard="false">
+          <div id="cookiesAlert" className="modal fade" role="dialog"  data-backdrop="true" data-keyboard="false">
             <div className="modal-dialog">
               <div className="modal-content">
                 <div className="modal-body">
-                  <div className="modalConetnt">
+                  <div className="modalContent">
                   <div className="securityLock"><ReactSVG src={securityLock} svgStyle={{ height: 25 }} /></div><div className="lineBar"><ReactSVG src={lineBar} svgStyle={{ height: 25 }} /></div><div className="alertMessage"><p className="title"><b><Translate id="welcome.we_use_cookies" /></b></p><p className="text"><Translate id="welcome.find_out_more" /><br/> <Translate id="welcome.cookies_and_converging" /> <Link to="/privacy_policy"         onClick={()=>{$("#cookiesAlert").modal('hide');}}><Translate id="welcome.here" /></Link>.</p></div><div className="close" data-dismiss="modal"><ReactSVG src={closeButton} svgStyle={{ height: 50 }} /></div>
                   </div>
                 </div>

@@ -152,20 +152,20 @@ class Contact extends React.Component {
                       </div>
                       <div className="line"></div>
                       <div className="wrap-input-textarea validate-input" data-validate="Message is required">
-                        <Textarea className="input" id="message" name="message" onChange={this.handleChange} placeholder="Compose message..." value={this.message} validations={[required]} />
+                        <Textarea className="input" id="message" name="message" onChange={this.handleChange} placeholder="Compose message..." defaultValue={this.message} validations={[required]} />
                         <span className="focus-input"></span>
                       </div>
                       <div className="container-contact-form-btn">
                         <div className="row">
-                          <div className="col-sm container-contact-form-securityLock">
+                          <div className="col-sx container-contact-form-securityLock">
                             <ReactSVG src={securityLock} svgStyle={{ height: 25 }} />
                           </div>
-                          <div className="col-sm container-contact-form-info">
+                          <div className="col-sx container-contact-form-info">
                             <Translate id="contact.your_data" /><br/>
                             <Translate id="contact.with_us" />
                           </div>
-                          <div className="col-sm text-right">
-                            <Button className="contact-form-btn-next " onClick={this.handleSubmit} ><Translate id="contact.next" /></Button>
+                          <div className="col-sx container-contact-form-button">
+                            <Button className="btn contact-form-btn-next" onClick={this.handleSubmit} ><Translate id="contact.next" /></Button>
                           </div>
                        </div>
 
@@ -183,7 +183,7 @@ class Contact extends React.Component {
                         <div className="close container-contact-form-btn-close" onClick={ () => {this.props.history.push("/welcome");}}><ReactSVG src={closeButton} svgStyle={{ height: 50 }} /></div>
                         <div className="title"><Translate id="contact.all_safe" />?</div>
                           <p className="small"><Translate id="contact.privacy_important" /></p>
-                          <p className="smaller"><a href="#"><Translate id="contact.find_out_more" /></a> <Translate id="contact.about_privacy" /></p>
+                          <p className="smaller"><a href="/privacy_policy"><Translate id="contact.find_out_more" /></a> <Translate id="contact.about_privacy" /></p>
                           <div className="wrapper">
                             <div className="round">
                               <input
@@ -198,9 +198,7 @@ class Contact extends React.Component {
                             <div className="sslIcon"><ReactSVG src={securityLock} svgStyle={{ height: 25 }} /></div><span className="ssl"><Translate id="contact.connection_secure" /></span>
                           </div>
                           <div className="container-contact-form-btn">
-                            {this.state.isChecked &&
-                            <button className="contact-form-btn-send" onClick={this.handleSend}><Translate id="contact.send" /></button>
-                            }
+                            <button className="btn contact-form-btn-send" disabled={!this.state.isChecked} onClick={this.handleSend}><Translate id="contact.send" /></button>
                           </div>
                       </div>
                     </div>

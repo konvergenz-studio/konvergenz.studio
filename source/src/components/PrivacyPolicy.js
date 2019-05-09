@@ -4,7 +4,7 @@ import Fade from 'react-reveal/Fade';
 import { Link } from 'react-router-dom';
 import ReactSVG from 'react-svg';
 import backButton from '../../public/images/BackButton.svg';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Router } from 'react-router-dom';
 
 
 class PrivacyPolicy extends React.Component {
@@ -20,11 +20,10 @@ class PrivacyPolicy extends React.Component {
 
   render() {
 
-
     return (
       <div className="container pt-3">
-        <div className="pt-3 pb-3">
-          <a href="#" onClick={()=>{this.props.history.goBack();}}><ReactSVG src={backButton} svgStyle={{ height: 50 }} /></a>
+        <div className="pl-0 pt-3 pb-5">
+          <a href="#" onClick={()=>{this.props.history.push("/welcome");}}><ReactSVG src={backButton} svgStyle={{ height: 50 }} /></a>
         </div>
       <Fade>
         <h4>Datenschutzerklärung</h4>
