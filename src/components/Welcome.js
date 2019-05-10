@@ -113,19 +113,23 @@ class Welcome extends React.Component {
                 cookieName="konvergenzStudio"
                 style={{
                   backgroundColor: "rgba(1, 1, 1, 0.6)",
-                  width: "360px",
+                  width: "380px",
                   height: "80px",
                   left: "50%",
                   zIndex: "999",
-                  marginLeft: "-180px",
+                  marginLeft: "-190px",
                   marginBottom:"20px",
-                  borderRadius: "10px"
+                  borderRadius: "10px",
+                  paddin:"0"
                 }}
-                buttonStyle={{ width: "10px",backgroundColor: "transparent",position:"absolute",top:"6px",right:"20px",zIndex:1000 }}
+                buttonStyle={{ width: "40px",backgroundColor: "transparent",position:"absolute",top:"6px",right:"0",zIndex:"1000" }}
                 expires={150}
             >
             <div className="row">
-              <div className="securityLock"><ReactSVG src={securityLock} svgStyle={{ height: 25 }} /></div><div className="lineBar"><ReactSVG src={lineBar} svgStyle={{ height: 25 }} /></div><div className="alertMessage"><p className="title"><b><Translate id="welcome.we_use_cookies" /></b></p><p className="text"><Translate id="welcome.find_out_more" /><br/> <Translate id="welcome.cookies_and_converging" /> <Link to="/privacy_policy"         onClick={()=>{$("#cookiesAlert").modal('hide');}}><Translate id="welcome.here" /></Link>.</p></div><div className="close" data-dismiss="modal"></div>
+              <div className="securityLock"><ReactSVG src={securityLock} svgStyle={{ height: 25 }} /></div>
+              <div className="lineBar"><ReactSVG src={lineBar} svgStyle={{ height: 25 }} /></div>
+              <div className="alertMessage"><p className="title"><b><Translate id="welcome.we_use_cookies" /></b></p><p className="text"><Translate id="welcome.find_out_more" /><br/>
+              <Translate id="welcome.cookies_and_converging" /> <Link to="/privacy_policy"><Translate id="welcome.here" /></Link>.</p></div>
             </div>
             </CookieConsent>
 

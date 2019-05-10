@@ -165,7 +165,7 @@ class Contact extends React.Component {
                             <Translate id="contact.with_us" />
                           </div>
                           <div className="col-sx container-contact-form-button">
-                            <Button type="button" className="btn btn- contact-form-btn-next" onClick={this.handleSubmit} ><Translate id="contact.next" /></Button>
+                            <Button type="button" className="btn contact-form-btn-next" onClick={this.handleSubmit} ><Translate id="contact.next" /></Button>
                           </div>
                        </div>
                       </div>
