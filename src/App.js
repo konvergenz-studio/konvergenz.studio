@@ -19,9 +19,9 @@ const App = () => {
     <div>
       <LocalizeProvider>
         <Switch>
-          <Route  path='/intro' component={Intro}/>
+          <Route exact path='/' component={Intro}/>
           <Route path='/home' component={Home}/>
-          <Route exact path='/' component={Welcome}/>
+          <Route path='/welcome' component={Welcome}/>
           <Route path='/contact' component={Contact}/>
           <Route path='/privacy_policy' component={PrivacyPolicy}/>
           <Route path='/impressum' component={Impressum}/>
