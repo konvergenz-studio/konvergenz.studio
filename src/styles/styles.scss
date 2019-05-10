@@ -712,6 +712,10 @@ textarea.input {
 
 }
 
+video::-webkit-media-controls {
+    display:none !important;
+}
+
 *::-webkit-media-controls-panel {
 
   display: none!important;
