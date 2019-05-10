@@ -26,11 +26,12 @@ class Home extends React.Component {
     }
 
     componentDidMount() {
-        this.initLanguage();
-        this.props.setActiveLanguage(defaultLanguage);
-        setTimeout(() => {
-            this.props.history.push("/welcome");
-       }, 30000)
+       this.initLanguage();
+       this.props.setActiveLanguage(defaultLanguage);
+    }
+
+    gotoWelcome(){
+      this.props.history.push("/welcome");
     }
 
     initLanguage(){
@@ -85,7 +86,7 @@ class Home extends React.Component {
             </div>
             <Fade>
               <div className="fullscreen-bg">
-                <video className="fullscreen-bg_video" muted autoPlay playsInline>
+                <video className="fullscreen-bg_video" onEnded={this.gotoWelcome.bind(this)} muted autoPlay playsInline>
                   <source src={video} type="video/mp4" />Your browser does not support the video tag.
                 </video>
               </div>
