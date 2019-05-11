@@ -56,7 +56,7 @@ module.exports = {
                         }
                     }
                 },
-              ],
+                ],
             },
             {
                 test: /\.html$/,
@@ -96,10 +96,10 @@ module.exports = {
                 }]
             },
             {
-              test: /\.(mov|mp4)$/,
-              use: [{
-                loader: 'file-loader'
-              }]
+                test: /\.(mov|mp4)$/,
+                use: [{
+                    loader: 'file-loader'
+                }]
             },
             {
                 test: /\.css$/,
@@ -113,6 +113,7 @@ module.exports = {
     devServer: {
         contentBase: './dist',
         hot: true,
+        historyApiFallback: true,
     },
     plugins: [
         extractSass,
