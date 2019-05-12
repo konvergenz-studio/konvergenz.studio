@@ -131,7 +131,7 @@ class Welcome extends React.Component {
                 </CookieConsent>
 
                 <Fade>
-                    <div className="home-button"><Link to="/welcome"><ReactSVG src={homeButton} svgStyle={{ height: 25 }} /></Link></div>
+                    <div className="home-button fixed"><Link to="/welcome"><ReactSVG src={homeButton} svgStyle={{ height: 25 }} /></Link></div>
                 </Fade>
                 <div className="impressum rotate"><Link to="/impressum"><Translate id="main.imprint" /></Link></div>
                 <div className="lang rotate pointer"><LanguageToggle /></div>

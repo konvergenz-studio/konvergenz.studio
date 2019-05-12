@@ -3,7 +3,10 @@ import React from 'react';
 import { renderToStaticMarkup } from "react-dom/server";
 import { Translate, withLocalize } from "react-localize-redux";
 import Fade from 'react-reveal/Fade';
+import { Link } from 'react-router-dom';
+import ReactSVG from 'react-svg';
 import video from '../../public/animations/intro.mp4';
+import homeButton from '../../public/images/HomeButton.svg';
 import translations from "../translations/translations.json";
 import LanguageToggle from './LanguageToggle';
 import Stories from './Stories';
@@ -72,6 +75,11 @@ class Home extends React.Component {
                                 <Translate id="home.positive_impact" />
                             ]}
                         />
+                        <div className="mt-3 text-center home-button">
+                            <Link to="/welcome">
+                                <ReactSVG src={homeButton} svgStyle={{ height: 25 }} />
+                            </Link>
+                        </div>
                     </div>
                 </div>
                 <Fade>

@@ -1,6 +1,6 @@
 {
   "name": "konvergenz-studio",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Konvergenz Studio we page",
   "scripts": {
     "start": "webpack-dev-server --mode development --open",

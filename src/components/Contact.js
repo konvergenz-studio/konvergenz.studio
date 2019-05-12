@@ -237,7 +237,7 @@ class Contact extends React.Component {
                 </div>
                 <div className="impressum rotate"><Link to="/impressum"><Translate id="main.imprint" /></Link></div>
                 <div className="lang rotate"><LanguageToggle /></div>
-                <div className="home-button text-center"><Link to="/welcome"><ReactSVG src={homeButton} svgStyle={{ height: 25 }} /></Link></div>
+                <div className="home-button fixed text-center"><Link to="/welcome"><ReactSVG src={homeButton} svgStyle={{ height: 25 }} /></Link></div>
             </div>
 
         );
