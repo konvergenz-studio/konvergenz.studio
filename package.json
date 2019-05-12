@@ -1,6 +1,6 @@
 {
   "name": "konvergenz-studio",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Konvergenz Studio we page",
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
@@ -13,6 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "bootstrap": "^4.0.0",
+    "classnames": "^2.2.6",
     "clean-webpack-plugin": "^0.1.19",
     "emailjs-com": "^2.3.2",
     "eslint": "^4.19.1",

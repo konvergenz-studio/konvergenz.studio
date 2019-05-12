@@ -6,6 +6,7 @@ import Fade from 'react-reveal/Fade';
 import video from '../../public/animations/intro.mp4';
 import translations from "../translations/translations.json";
 import LanguageToggle from './LanguageToggle';
+import Stories from './Stories';
 
 const defaultLanguage = (locale2.split("-")[0] == "de") ? "de" : "en";
 
@@ -64,23 +65,13 @@ class Home extends React.Component {
 
                 <div className="container">
                     <div className="vcenter">
-                        <div className="paragraphs">
-                            <Fade delay={2000}>
-                                <p className="text-center">
-                                    <Translate id="home.through_science" />
-                                </p>
-                            </Fade>
-                            <Fade delay={4000}>
-                                <p className="text-center">
-                                    <Translate id="home.more_diverse" />
-                                </p>
-                            </Fade>
-                            <Fade delay={6000}>
-                                <p className="text-center">
-                                    <Translate id="home.positive_impact" />
-                                </p>
-                            </Fade>
-                        </div>
+                        <Stories
+                            stories={[
+                                <Translate id="home.through_science" />,
+                                <Translate id="home.more_diverse" />,
+                                <Translate id="home.positive_impact" />
+                            ]}
+                        />
                     </div>
                 </div>
                 <Fade>

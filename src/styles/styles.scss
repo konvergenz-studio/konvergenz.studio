@@ -254,8 +254,39 @@ h5 {
   transform: translate(-50%, -50%);
 }
 
-.paragraphs{
-  width: 300px;
+.stories {
+  text-align: center;
+
+  &-list {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    place-content: stretch center;
+    align-items: center;
+    transition: left 0.75s;
+  }
+
+  &-story {
+    padding: 0 20px;
+    opacity: 0;
+    transition: opacity 0.5s;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  &-pagination {
+    display: inline-block;
+    width: 50px;
+    height: 4px;
+    margin: 0 10px;
+    background: rgba(black, 0.2);
+
+    &.active {
+      background: rgba(red, 0.2);
+    }
+  }
 }
 
 input {
