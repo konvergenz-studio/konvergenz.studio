@@ -2,7 +2,7 @@ import React from 'react';
 import cx from 'classnames';
 
 const STORY_WIDTH = 300;
-const STORY_SWITCH_DELAY = 5000;
+const STORY_SWITCH_DELAY = 4500;
 const STORY_INDEX_INCREMENT = 1;
 
 export default class Stories extends React.PureComponent {
@@ -33,13 +33,15 @@ export default class Stories extends React.PureComponent {
     }
 
     shallSwitchStory(prevIndex) {
-        const { currentStoryIndex } = this.state;
-
-        if (this.isLastStoryByIndex(currentStoryIndex)) {
+        if (this.wereAllStoriesDisplayed()) {
             return false;
         }
 
-        return prevIndex !== currentStoryIndex;
+        return prevIndex !== this.state.currentStoryIndex;
+    }
+
+    wereAllStoriesDisplayed() {
+        return this.props.stories.length === this.state.currentStoryIndex;
     }
 
     scheduleStorySwitch() {
@@ -50,10 +52,6 @@ export default class Stories extends React.PureComponent {
         this.setState({
             currentStoryIndex: this.getNextStoryIndex()
         });
-    }
-
-    isLastStoryByIndex(index) {
-        return this.props.stories.length - STORY_INDEX_INCREMENT === index;
     }
 
     isCurrentStoryByIndex(index) {
@@ -92,6 +90,7 @@ export default class Stories extends React.PureComponent {
     renderPagination(story, index) {
         const className = cx('stories-pagination', {
             active: this.isCurrentStoryByIndex(index),
+            hidden: this.wereAllStoriesDisplayed(),
         });
 
         return (<span key={`pagination-${index}`} className={className}></span>);

@@ -65,7 +65,6 @@ class Home extends React.Component {
 
         return (
             <div>
-
                 <div className="container">
                     <div className="vcenter">
                         <Stories
@@ -75,18 +74,18 @@ class Home extends React.Component {
                                 <Translate id="home.positive_impact" />
                             ]}
                         />
-                        <div className="mt-3 text-center home-button">
-                            <Link to="/welcome">
-                                <ReactSVG src={homeButton} svgStyle={{ height: 25 }} />
-                            </Link>
-                        </div>
                     </div>
                 </div>
                 <Fade>
+                    <div className="home-button">
+                        <Link to="/welcome">
+                            <ReactSVG src={homeButton} svgStyle={{ height: 25 }} />
+                        </Link>
+                    </div>
                     <div className="fullscreen-bg">
                         <video className="fullscreen-bg_video" onEnded={this.gotoWelcome.bind(this)} muted autoPlay playsInline>
                             <source src={video} type="video/mp4" />Your browser does not support the video tag.
-                </video>
+                        </video>
                     </div>
                 </Fade>
                 <div className="lang rotate"><LanguageToggle /></div>

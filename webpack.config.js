@@ -11,7 +11,7 @@ module.exports = {
     // mode: 'production',
     entry: { app: './src/index.js' },
     output: {
-        filename: '[name].js',
+        filename: '[name].[hash].js',
     },
     module: {
         rules: [
