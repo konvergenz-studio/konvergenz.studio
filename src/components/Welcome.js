@@ -15,13 +15,6 @@ import securityLock from '../../public/images/SecurityLock.svg';
 import translations from "../translations/translations.json";
 import LanguageToggle from './LanguageToggle';
 
-
-window.jQuery = $;
-window.$ = $;
-global.jQuery = $;
-
-
-
 class Welcome extends React.Component {
 
     constructor(props) {
@@ -30,8 +23,6 @@ class Welcome extends React.Component {
     }
 
     componentDidMount() {
-        //$("#cookiesAlert").modal('show');
-
         this.initLanguage();
     }
 
@@ -55,7 +46,8 @@ class Welcome extends React.Component {
             autoplay: false,
             animationData: logoAnimation,
             rendererSettings: {
-                preserveAspectRatio: 'xMidYMid slice'
+                preserveAspectRatio: 'xMidYMid slice',
+                className: 'contact-button'
             }
         };
 
@@ -79,19 +71,12 @@ class Welcome extends React.Component {
                             </p>
                         </Fade>
                         <Fade>
-                            <div className="contact-button">
+                            <div className="contact-button-wrapper">
                                 <Lottie options={defaultOptions}
                                     height={85}
                                     width={85}
                                     isStopped={this.state.isStopped}
                                     isPaused={this.state.isPaused}
-                                    onMouseEnter={() => {
-                                        document.body.style.cursor = "pointer";
-                                        this.onMouseEnter;
-                                    }}
-                                    onMouseLeave={() => {
-                                        document.body.style.cursor = "default";
-                                    }}
                                     eventListeners={[{
                                         eventName: 'complete',
                                         callback: () => { this.props.history.push("/contact"); },

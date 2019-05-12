@@ -121,8 +121,16 @@ h5 {
   color: #000;
 }
 
-.contact-button{
+.contact-button-wrapper{
   padding-top: 80px;
+}
+.contact-button{
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-button path:hover {
+  fill: #000;
 }
 
 .home-button{
