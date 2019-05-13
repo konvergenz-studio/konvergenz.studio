@@ -50,7 +50,6 @@ class Contact extends React.Component {
     }
 
     componentDidMount() {
-        $("#cookiesAlert").modal('hide');
         // document.body.style = 'background: #272d33;';
         this.initLanguage();
     }
