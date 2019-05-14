@@ -63,7 +63,7 @@ class Welcome extends React.Component {
                         </Fade>
                         <Fade>
                             <p className="welcome-content">
-                                <a target="_blank" href="https://medium.com/@konvergenzstudio">
+                                <a target="_blank" href="https://medium.com/konvergenzpublications">
                                     <Translate id="welcome.learn_more_about_our" /><br />
                                     <Translate id="welcome.values_and_what" /><br />
                                     <Translate id="welcome.drives_us" />
