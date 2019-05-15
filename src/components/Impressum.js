@@ -14,7 +14,7 @@ class Impressum extends React.Component {
         return (
             <div className="container pt-3 ">
                 <div className="pl-0 pt-3 pb-5">
-                    <a href="#" onClick={() => { this.props.history.push("/welcome"); }}>
+                    <a onClick={() => { this.props.history.push("/welcome"); }}>
                         <ReactSVG src={backButton} svgStyle={{ height: 50 }} />
                     </a>
                 </div>
