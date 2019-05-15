@@ -1,8 +1,12 @@
 {
     "main": {
         "imprint": [
-            "Legal Notice",
+            "Legal",
             "Impressum"
+        ],
+        "privacy": [
+            "Privacy",
+            "Datenschutz"
         ],
         "back": [
             "Back to website",

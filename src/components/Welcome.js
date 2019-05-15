@@ -123,6 +123,9 @@ class Welcome extends React.Component {
                     <Link to="/impressum">
                         <Translate id="main.imprint" />
                     </Link>
+                    <Link to="/privacy_policy">
+                        <Translate id="main.privacy" />
+                    </Link>
                 </SideNavigation>
 
                 <div className="bg">

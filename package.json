@@ -1,6 +1,6 @@
 {
   "name": "konvergenz-studio",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Konvergenz Studio we page",
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
@@ -28,6 +28,7 @@
     "react-alert-template-basic": "^1.0.0",
     "react-cookie-consent": "^2.3.1",
     "react-ga": "^2.5.7",
+    "react-group": "^3.0.0",
     "react-localize-redux": "^3.5.3",
     "react-lottie": "^1.2.3",
     "react-reveal": "^1.2.2",

@@ -239,6 +239,9 @@ class Contact extends React.Component {
                     <Link to="/impressum">
                         <Translate id="main.imprint" />
                     </Link>
+                    <Link to="/privacy_policy">
+                        <Translate id="main.privacy" />
+                    </Link>
                 </SideNavigation>
 
                 <div className="home-button text-center"><Link to="/welcome"><ReactSVG src={homeButton} svgStyle={{ height: 25 }} /></Link></div>
