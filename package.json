@@ -1,11 +1,12 @@
 {
   "name": "konvergenz-studio",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Konvergenz Studio we page",
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
-    "dev": "webpack --mode development"
+    "dev": "webpack --mode development",
+    "bump": "bump"
   },
   "keywords": [],
   "private": true,
@@ -63,6 +64,7 @@
     "react-dom": "^16.8.6",
     "sass-loader": "^6.0.7",
     "url-loader": "^1.1.2",
+    "version-bump-prompt": "^5.0.1",
     "webpack": "^4.30.0",
     "webpack-merge": "^4.1.2"
   }

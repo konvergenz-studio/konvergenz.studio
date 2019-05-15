@@ -8,8 +8,8 @@ import ReactSVG from 'react-svg';
 import video from '../../public/animations/intro.mp4';
 import homeButton from '../../public/images/HomeButton.svg';
 import translations from "../translations/translations.json";
-import LanguageToggle from './LanguageToggle';
 import Stories from './Stories';
+import SideNavigation from './SideNavigation';
 
 const defaultLanguage = (locale2.split("-")[0] == "de") ? "de" : "en";
 
@@ -88,7 +88,7 @@ class Home extends React.Component {
                         </video>
                     </div>
                 </Fade>
-                <div className="lang rotate"><LanguageToggle /></div>
+                <SideNavigation />
             </div>
         );
     }

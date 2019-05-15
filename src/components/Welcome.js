@@ -13,7 +13,7 @@ import homeButton from '../../public/images/HomeButton.svg';
 import lineBar from '../../public/images/lineBar.svg';
 import securityLock from '../../public/images/SecurityLock.svg';
 import translations from "../translations/translations.json";
-import LanguageToggle from './LanguageToggle';
+import SideNavigation from './SideNavigation';
 
 class Welcome extends React.Component {
 
@@ -118,10 +118,17 @@ class Welcome extends React.Component {
                 <Fade>
                     <div className="home-button"><Link to="/welcome"><ReactSVG src={homeButton} svgStyle={{ height: 25 }} /></Link></div>
                 </Fade>
-                <div className="impressum rotate"><Link to="/impressum"><Translate id="main.imprint" /></Link></div>
-                <div className="lang rotate pointer"><LanguageToggle /></div>
 
-                <div className="bg"></div>
+                <SideNavigation>
+                    <Link to="/impressum">
+                        <Translate id="main.imprint" />
+                    </Link>
+                </SideNavigation>
+
+                <div className="bg">
+                    <div className="impressum"></div>
+                    <div className="lang"></div>
+                </div>
 
             </div>
         );

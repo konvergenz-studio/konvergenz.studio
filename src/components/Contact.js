@@ -16,7 +16,7 @@ import closeButton from '../../public/images/close-button.svg';
 import homeButton from '../../public/images/HomeButton.svg';
 import securityLock from '../../public/images/SecurityLock.svg';
 import translations from "../translations/translations.json";
-import LanguageToggle from './LanguageToggle';
+import SideNavigation from './SideNavigation';
 
 const required = (value) => {
     if (!value.toString().trim().length) {
@@ -234,8 +234,13 @@ class Contact extends React.Component {
 
                     </div>
                 </div>
-                <div className="impressum rotate"><Link to="/impressum"><Translate id="main.imprint" /></Link></div>
-                <div className="lang rotate"><LanguageToggle /></div>
+
+                <SideNavigation>
+                    <Link to="/impressum">
+                        <Translate id="main.imprint" />
+                    </Link>
+                </SideNavigation>
+
                 <div className="home-button text-center"><Link to="/welcome"><ReactSVG src={homeButton} svgStyle={{ height: 25 }} /></Link></div>
             </div>
 
