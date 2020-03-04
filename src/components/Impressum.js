@@ -32,11 +32,10 @@ class Impressum extends React.Component {
                         Registergericht: Amtsgericht München</p>
                     <br />
                     <h5>Vertreten durch die Geschäftsführer:</h5>
-                    <p>Marius Bauer<br />
-                        Saša Milinković</p>
+                    <p>Marius Bauer</p>
                     <br />
                     <h5>Kontakt:</h5>
-                    <p>Telefon: +49 (0) 176 456 999 75<br />
+                    <p>Telefon: +49 (0) 151 400 000 66<br />
                         E-Mail: mail@konvergenz.studio</p>
                     <br />
                     <h5>Umsatzsteuer-ID</h5>
