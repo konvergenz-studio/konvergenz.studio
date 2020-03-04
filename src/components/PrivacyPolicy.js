@@ -23,7 +23,7 @@ class PrivacyPolicy extends React.Component {
                     <h5>Allgemeiner Hinweis und Pflichtinformationen</h5>
                     <h5>Benennung der verantwortlichen Stelle</h5>
                     <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
-                    <p><span id="s3-t-firma">Konvergenz Studio GmbH</span><br /><span id="s3-t-ansprechpartner">Saša Milinković</span><br /><span id="s3-t-strasse">Pacellistr. 8</span><br /><span id="s3-t-plz">80333</span> <span id="s3-t-ort">München</span></p><p></p>
+                    <p><span id="s3-t-firma">Konvergenz Studio GmbH</span><br /><span id="s3-t-ansprechpartner">Marius Bauer</span><br /><span id="s3-t-strasse">Pacellistr. 8</span><br /><span id="s3-t-plz">80333</span> <span id="s3-t-ort">München</span></p><p></p>
                     <p>Die verantwortliche Stelle entscheidet allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.B. Namen, Kontaktdaten o. Ä.).</p>
 
                     <p><strong>Widerruf Ihrer Einwilligung zur Datenverarbeitung</strong></p>
