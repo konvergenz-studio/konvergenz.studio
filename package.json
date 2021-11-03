@@ -36,7 +36,7 @@
     "react-svg": "^9.0.4",
     "react-validation": "^3.0.7",
     "style-loader": "^0.20.3",
-    "validator": "^10.11.0",
+    "validator": "^13.7.0",
     "webpack-cli": "^3.1.1",
     "webpack-dev-server": "^3.3.1"
   },
